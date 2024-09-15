@@ -1,4 +1,4 @@
-Undo and Redo Commands
+# Undo and Redo Commands
 
     Undo:
         Command: :undo
@@ -10,7 +10,7 @@ Undo and Redo Commands
         Macro: U
         Function: Reapplies the command that was undone. Useful if you change your mind after an undo and want to restore the previous state.
 
-Practical Use
+# Practical Use
 
     Experiment with Commands:
         Make some changes by painting and erasing.
@@ -28,7 +28,7 @@ Practical Use
         Undo each step to see how it affects your layout.
         Redo steps to ensure you understand how the redo command restores the previous state.
 
-Example Workflow
+# Example Workflow
 
     Initial Actions:
         Paint a few layers.
