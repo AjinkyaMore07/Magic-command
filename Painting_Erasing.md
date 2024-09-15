@@ -1,4 +1,4 @@
-Basic Operations
+# Basic Operations
 
     Painting:
         With Mouse:
@@ -22,7 +22,7 @@ Basic Operations
             Press ˆD (Control-D) to erase those specific layers.
 
 
-Layer Interactions
+# Layer Interactions
 
     Transparent Combination: Some layers are transparent, so painting one on top of another will show a combination of both layers. For example, painting metal1 (blue) on top of polysilicon (red) results in a combined effect.
 
@@ -31,7 +31,7 @@ Layer Interactions
     Replacement: Some layers replace others when painted on top. For example, painting pcontact on top of ntransistor replaces the ntransistor layer with pcontact.
 
 
-Practice Tips
+# Practice Tips
 
     Experiment with Layer Combinations:
         Try painting different layers on top of each other to see the combined or resultant effects.
@@ -48,7 +48,7 @@ Practice Tips
         Ignore white dots (design rule violations) for now; they will be explained in a later tutorial.
 
 
-Commands and Macros Recap
+# Commands and Macros Recap
 
     Paint: :paint layer1,layer2,...
     Erase: :erase layer1,layer2,...
