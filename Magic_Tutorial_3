@@ -1,0 +1,141 @@
+Magic Tutorial #3: Advanced Painting (Wiring and Plowing)
+
+This tutorial introduces advanced features in Magic for managing layouts, focusing on wiring and plowing techniques.
+1. Introduction
+
+In the previous tutorials, you learned basic painting and selection techniques. This tutorial will cover more advanced features that enhance efficiency when dealing with complex layouts.
+2. Wiring
+
+Wiring allows you to quickly draw wires by specifying start and end points, rather than using the box tool.
+
+Key Commands:
+
+    :tool
+        Action: Switches between different tools. The space bar is a macro for this command.
+        Usage: Use :tool info to get details about the current tool and mouse button functions.
+
+    Basic Wiring Commands:
+        :wire [direction]
+            Usage: Paints wire segments. Default is horizontal or vertical, but you can specify direction with options like horizontal or vertical.
+        :wire horizontal or :wire vertical
+            Usage: Forces the direction of the wire leg.
+
+Steps:
+
+    Select Wiring Material: Point to a piece of material and left-click to select it.
+    Add Legs:
+        Right-click to draw a wire segment from the current box position to the cursor.
+        Continue adding segments by right-clicking at new positions.
+    Place Contacts: Middle-click to place a contact, which also updates the material type and thickness to match the layer of the contact.
+
+Example:
+
+    Draw a red wire from label 1 to label 2, then to labels 3 and 4. Repeat with blue material for different segments.
+
+Special Features:
+
+    Box Positioning: Use the box tool to set starting points for wires if the desired material isn’t available under the cursor.
+    Selection Commands: New wire legs and contacts are automatically selected, making them easy to modify with commands like :stretch.
+
+3. Tools
+
+Understanding Tools:
+
+    Box Tool: Default tool for creating and modifying boxes.
+    Wiring Tool: Used for placing and manipulating wires.
+    Netlist Tool: For netlist editing (covered in Tutorial #7).
+
+Switching Tools:
+
+    Command: :tool
+    Macro: Space bar ( ) cycles through tools.
+
+Command Example:
+
+    Switch to the wiring tool and use :tool info to view current tool details and mouse button functions.
+
+4. Basic Wiring Commands
+
+Material Selection:
+
+    Left-click on a piece of material to select its type and width.
+
+Drawing Wires:
+
+    Right-click to draw wire segments. Magic auto-aligns to horizontal or vertical directions, but you can force directions with :wire horizontal or :wire vertical.
+
+5. Contacts
+
+Placing Contacts:
+
+    Middle-click to place a contact at the end of the wire leg. This updates the material type and thickness to match the layer of the contact.
+
+Error Handling:
+
+    If contacts cannot be placed between certain layers, Magic will issue an error message.
+
+6. Wiring and the Box
+
+Using the Box:
+
+    The box helps start new wires in areas without the desired material. Use the box tool to reposition the starting point for wire legs.
+
+Material Selection Without a Box:
+
+    Use :wire type layer width to specify wire material and width directly.
+
+7. Wiring and Selection
+
+Adjusting Wires:
+
+    Use :stretch to adjust the position of wire legs and contacts after they have been drawn.
+
+Example:
+
+    Paint a blue wire segment and use :stretch to adjust its length and position.
+
+8. Bundles of Wires
+
+Commands for Bundles:
+
+    :fill direction [layers]
+        Extends paint in the specified direction.
+    :corner direction1 direction2 [layers]
+        Creates L-shaped wires.
+
+Example Usage:
+
+    Use :fill left or :corner right up to extend or create L-shaped wire bundles.
+
+Replicating Contacts:
+
+    Use :array xsize ysize to replicate a contact across a bundle of wires.
+
+Example Command:
+
+    :array 1 10 copies a selected contact 10 times in the y-direction.
+
+9. Plowing
+
+Plowing Basics:
+
+    Command: :plow direction [layers]
+        Usage: Moves material in a specified direction, preserving design rules and connectivity.
+
+Examples:
+
+    :plow up moves material from the bottom to the top of the box.
+    :plow right metal1 moves metal1 edges to the right.
+
+Plowing Options:
+
+    :plow nojogs and :plow jogs control jog insertion during plowing.
+    :plow straighten and :plow nostraighten control jog straightening after plowing.
+
+Boundary Control:
+
+    :plow boundary restricts plowing to a specified area, preserving the geometry outside the boundary.
+
+Example Usage:
+
+    Place the box over an area, use :plow boundary, and then plow within the boundary.
