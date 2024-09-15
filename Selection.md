@@ -57,3 +57,41 @@ Magic Selection Techniques
         Get Help on Selection:
         Command: :select help
         Function: Provides a summary of all selection options and commands.
+
+
+selection operations you can perform:
+
+        Action: Deletes everything within the selection.
+        Macro: d
+        Note: Different from :erase, which erases paint but keeps the selection box.
+
+    [direction [distance]]
+        Action: Moves both the box and the selection to a new location.
+        Macro: t (for a simple move) or use directional arguments like :move up 10 to move precisely.
+        Macros for directions: q (left), w (down), e (up), r (right)
+
+        Action: Copies the selection and places the copy at the new location, leaving the original in place.
+        Macro: c
+
+    [direction [distance]]
+        Action: Stretches the selection in a given direction while erasing paint along the path.
+        Macro: T
+        Directional macros: Q (left), W (down), E (up), R (right)
+
+        Action: Flips the selection upside down.
+        Note: The area occupied by the selection remains the same.
+
+        Action: Flips the selection sideways.
+        Note: Like :upsidedown, it maintains the total area of the selection.
+
+    [degrees]
+        Action: Rotates the selection clockwise. Degrees must be multiples of 90, defaulting to 90 if not specified.
+        Note: The lower-left corner of the new selection aligns with the lower-left corner of the old selection.
+
+Tips for Practice:
+
+    Use :delete to remove selected elements and :undo to revert changes.
+    Move elements around using :move or t. Try precise movements with directional commands.
+    Practice copying elements with :copy or c.
+    Experiment with :stretch (or T) to see how it affects the selected material.
+    Flip selections using :upsidedown or :sideways and rotate with :clockwise.
